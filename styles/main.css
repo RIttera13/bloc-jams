@@ -56,6 +56,14 @@ body {
 
 .navbar-link:hover {
     color: rgb(233,50,117);
+<<<<<<< HEAD
+=======
+}
+
+.navbar-link:active {
+    color: rgb(233,50,117);
+    background-color: white;
+>>>>>>> 5ee505bc90fc4e558a1f87b569191f98cbb4f1e2
 }
 
 @media (min-width: 640px) {
