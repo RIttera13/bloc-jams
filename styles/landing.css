@@ -39,12 +39,25 @@ body.landing {
     -webkit-transform: scaleX(0.9) translateY(3rem);
     -moz-transform: scaleX(0.9) translateY(3rem);
     transform: scaleX(0.9) translateY(3rem);
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    -webkit-transition: all 4s ease-in-out;
+    -moz-transition: all 4s ease-in-out;
+    transition: all 4s ease-in-out;
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    -webkit-transition-duration: 2.5s;
+    -moz-transition-duration: 2.5s;
+    transition-duration: 2.5s;
+}
+
+.point:hover {
+  position: relative;
+  transition-property: background-color, color;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  background-color:white;
+  color:black;
+  box-shadow: 2px 2px 1px black;
 }
 
 .point .point-title {
