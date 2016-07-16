@@ -28,6 +28,21 @@
      ]
  };
 
+ var albumDali = {
+     title: "It's Surreal",
+     artist: 'Salvador Dali',
+     label: 'Surrealism',
+     year: '1931',
+     albumArtUrl: 'assets/images/album_covers/18.png',
+     songs: [
+         { title: 'Melting Clocks?', duration: '0:00' },
+         { title: 'Is that an elephant?', duration: '6:11' },
+         { title: 'Dream Escape', duration: '59:59'},
+         { title: 'Lips', duration: '1:48' },
+         { title: 'A slef portrait', duration: '9:32'}
+     ]
+ };
+
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -39,6 +54,12 @@
  
      return template;
  };
+
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
 var setCurrentAlbum = function(album) {
     
@@ -62,4 +83,15 @@ var setCurrentAlbum = function(album) {
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
- };
+ 
+var albums = [albumPicasso, albumMarconi, albumDali]
+var index = 1;
+     
+albumImage.addEventListener("click", function(event) {
+    setCurrentAlbum(albums[index]);
+    index++;
+    if(index == albums.length){
+            index = 0;
+    }
+ });
+};
